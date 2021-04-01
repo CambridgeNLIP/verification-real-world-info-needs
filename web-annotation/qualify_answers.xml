@@ -1,0 +1,411 @@
+<AnswerKey xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/AnswerKey.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/AnswerKey.xsd ">
+
+    <Question>
+        <QuestionIdentifier>q1</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>3</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>4</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>3</SelectionIdentifier>
+            <SelectionIdentifier>4</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>q1a</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>2</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+    </Question>
+
+
+    <Question>
+        <QuestionIdentifier>q2</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>q2a</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>2</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+    </Question>
+
+<!--
+    <Question>
+        <QuestionIdentifier>q3</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>2</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <SelectionIdentifier>2</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+
+        <AnswerOption>
+            <SelectionIdentifier>2</SelectionIdentifier>
+            <SelectionIdentifier>3</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <SelectionIdentifier>3</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <SelectionIdentifier>2</SelectionIdentifier>
+            <SelectionIdentifier>3</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+
+
+    </Question>
+
+
+    <Question>
+        <QuestionIdentifier>q3a</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>3</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+    </Question>
+
+    -->
+
+    <Question>
+        <QuestionIdentifier>q4</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>q4a</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>3</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+    </Question>
+
+
+    <!-- check -->
+    <Question>
+        <QuestionIdentifier>q5</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <AnswerScore>-10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>2</SelectionIdentifier>
+            <AnswerScore>-10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>3</SelectionIdentifier>
+            <AnswerScore>-10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>4</SelectionIdentifier>
+            <AnswerScore>-10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <SelectionIdentifier>2</SelectionIdentifier>
+            <SelectionIdentifier>3</SelectionIdentifier>
+            <SelectionIdentifier>4</SelectionIdentifier>
+            <AnswerScore>-10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>2</SelectionIdentifier>
+            <SelectionIdentifier>3</SelectionIdentifier>
+            <SelectionIdentifier>4</SelectionIdentifier>
+            <AnswerScore>-10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <SelectionIdentifier>3</SelectionIdentifier>
+            <SelectionIdentifier>4</SelectionIdentifier>
+            <AnswerScore>-10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <SelectionIdentifier>2</SelectionIdentifier>
+            <SelectionIdentifier>4</SelectionIdentifier>
+            <AnswerScore>-10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <SelectionIdentifier>2</SelectionIdentifier>
+            <SelectionIdentifier>3</SelectionIdentifier>
+            <AnswerScore>-10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>3</SelectionIdentifier>
+            <SelectionIdentifier>4</SelectionIdentifier>
+            <AnswerScore>-10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <SelectionIdentifier>2</SelectionIdentifier>
+            <AnswerScore>-10</AnswerScore>
+        </AnswerOption>
+            <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <SelectionIdentifier>3</SelectionIdentifier>
+            <AnswerScore>-10</AnswerScore>
+        </AnswerOption>
+
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <SelectionIdentifier>4</SelectionIdentifier>
+            <AnswerScore>-10</AnswerScore>
+        </AnswerOption>
+
+        <AnswerOption>
+            <SelectionIdentifier>2</SelectionIdentifier>
+            <SelectionIdentifier>4</SelectionIdentifier>
+            <AnswerScore>-10</AnswerScore>
+        </AnswerOption>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>q5a</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>3</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+    </Question>
+
+
+    <!-- check -->
+    <!--
+    <Question>
+        <QuestionIdentifier>q6</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>3</SelectionIdentifier>
+            <SelectionIdentifier>4</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>q6a</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>2</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+    </Question>
+
+    -->
+    <Question>
+        <QuestionIdentifier>q7</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>5</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>3</SelectionIdentifier>
+            <SelectionIdentifier>5</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <SelectionIdentifier>3</SelectionIdentifier>
+            <SelectionIdentifier>5</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>q7a</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+    </Question>
+
+
+    <Question>
+        <QuestionIdentifier>q8</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <SelectionIdentifier>3</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>q8a</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+    </Question>
+
+
+
+    <Question>
+        <QuestionIdentifier>q9</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <AnswerScore>-10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>2</SelectionIdentifier>
+            <AnswerScore>-10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <SelectionIdentifier>2</SelectionIdentifier>
+            <AnswerScore>-10</AnswerScore>
+        </AnswerOption>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>q9a</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>3</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+    </Question>
+
+
+
+    <Question>
+        <QuestionIdentifier>q10</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>6</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <SelectionIdentifier>6</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>q10a</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>2</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+    </Question>
+
+
+
+    <Question>
+        <QuestionIdentifier>q11</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <SelectionIdentifier>4</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+
+        <AnswerOption>
+            <SelectionIdentifier>4</SelectionIdentifier>
+            <AnswerScore>5</AnswerScore>
+        </AnswerOption>
+
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <AnswerScore>5</AnswerScore>
+        </AnswerOption>
+    </Question>
+
+
+    <Question>
+        <QuestionIdentifier>q11a</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>2</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+    </Question>
+
+
+    <!-- check -->
+    <Question>
+        <QuestionIdentifier>q12</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <SelectionIdentifier>5</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <SelectionIdentifier>6</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <SelectionIdentifier>5</SelectionIdentifier>
+            <SelectionIdentifier>6</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+        <AnswerOption>
+            <SelectionIdentifier>6</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>q12a</QuestionIdentifier>
+        <AnswerOption>
+            <SelectionIdentifier>1</SelectionIdentifier>
+            <SelectionIdentifier>2</SelectionIdentifier>
+            <AnswerScore>10</AnswerScore>
+        </AnswerOption>
+    </Question>
+
+
+
+    <QualificationValueMapping>
+        <PercentageMapping>
+            <MaximumSummedScore>160</MaximumSummedScore>
+        </PercentageMapping>
+    </QualificationValueMapping>
+
+</AnswerKey>

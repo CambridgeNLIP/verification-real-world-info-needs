@@ -1,0 +1,14 @@
+Flask
+waitress
+tqdm
+pymongo
+boto==2.49.0
+boto3==1.9.220
+botocore==1.12.220
+pyspellchecker
+fever-drqa
+mwparserfromhell
+spacy
+wikipedia
+pysbd
+html2text

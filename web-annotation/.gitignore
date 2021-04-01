@@ -1,0 +1,6 @@
+data/
+*.pyc
+dist/
+.idea/
+.DS_Store
+.ipynb_checkpoints

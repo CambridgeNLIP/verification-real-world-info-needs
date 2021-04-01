@@ -1,0 +1,92 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div class="callout left">
+                <h4>Task</h4>
+            </div>
+        </div>
+
+        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+            <div class="ebox">
+                Select evidence that fully <strong>SUPPORTS</strong> or <strong>REFUTES</strong> the claim. If the sentences appear to partially support or refute the claim but are not enough to be fully certain, select <strong>PARTIAL EVIDENCE</strong>.
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        </div>
+
+
+        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+
+            <div style="margin-top:20px;">
+                <div style="float:right">
+                    <button class="btn btn-warning" confirmed-click="onSkip();" ng-confirm-click="Skip annotating this claim.">Skip</button>
+                </div>
+
+                <button class="btn btn-default">View Example</button>
+                <button class="btn btn-default">Help</button>
+           </div>
+
+        </div>
+    </div>
+
+    <div class="row" style="margin-top:20px;">
+
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div class="callout left">
+                <h4>Claim</h4>
+            </div>
+        </div>
+
+        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+            <div class="ebox">
+                {{ claim_text }}
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <div class="row" style="margin-top:20px;">
+
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div class="callout left">
+                <h4>Evidence</h4>
+            </div>
+        </div>
+
+        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+
+            <div class="" ng-repeat="line in lines track by $index" ng-init="words = line['sentence']; sent_idx = $index" ng-class="{'highlight':active==$index, 'ebox': words.length>1,'pskip': words.length<=1 }">
+                <div style="display:table-cell; width:100%">
+                    {{ words }}
+                </div>
+                <div style="display:table-cell;padding-left:10px; line-height:100%" ng-show="words.length>1 && active!=$index">
+                    <button class="btn btn-default btn-xs" ng-show="support_sents.indexOf($index)==-1&&refute_sents.indexOf($index)==-1" ng-disabled="loading" ng-click="getInfo($index)">Expand</button>
+                    <button class="btn btn-default btn-xs" ng-show="support_sents.indexOf($index)!=-1||refute_sents.indexOf($index)!=-1" ng-disabled="loading" ng-click="getInfo($index)">Edit</button>
+                </div>
+
+                <div style="display:table-cell;padding-left:10px; line-height:100%; width:150px;" ng-show="words.length>1 && active==$index" >
+                    <button class="btn btn-success btn-xs" ng-disabled="loading" ng-click="supports($index)"><span class="glyphicon glyphicon-ok"></span>Supports</button>
+                    <button class="btn btn-danger btn-xs" ng-disabled="loading" ng-click="refutes($index)"><span class="glyphicon glyphicon-remove"></span>Refutes</button>
+
+                    <button class="btn btn-xs" ng-disabled="loading" ng-click="cancel($index)">Cancel</button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+</div>
+
+
+

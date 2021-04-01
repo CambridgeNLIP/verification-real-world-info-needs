@@ -1,0 +1,259 @@
+<div class="ebox" style="padding: 15px">
+    <p><strong>Full guidelines are available by pressing the "guidelines button"</strong>: Select evidence from the Wikipedia page that can be used to support or refute the claim. If the sentence doesn't contain enough information to fully support a sentence, select "partially supports/refutes", otherwise select "fully supports/refutes".</p>
+</div>
+
+
+<div ng-class="{sandbox:testingMode}" style="position:absolute; left:0; right:0; top:100px; height:120px; background:white; padding-top:0 !important; padding-bottom:10px !important; border-bottom:1px solid #555;">
+
+
+    <div>
+
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div class="callout left">
+                <h4>Claim</h4>
+            </div>
+        </div>
+
+        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+            <div class="ebox">
+                {{ claim_text }}
+            </div>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            <div style="margin-top:20px;">
+                <div style="float:right">
+                    <!--<button class="btn btn-warning" ng-show="entity.length"  ng-show="entity.length" ng-click="showModal2 = true">Skip</button>-->
+                    <button class="btn btn-default"  ng-click="showModal3=true">Guidelines</button>
+                </div>
+
+                <button class="btn btn-primary" ng-show="entity.length" ng-disabled="block_submit||(partial_support_sents.length==0&&partial_refute_sents==0&&support_sents.length==0&&refute_sents.length==0)" ng-click="onSubmit(xform,0)">Submit Evidence</button>
+                <button class="btn btn-warning" ng-disabled="block_submit" ng-confirm-click="Are you sure the article contains no evidence?" confirmed-click="showModal2=false; onSubmit(xform, 1)">Not Enough Information</button>
+                <span ng-show="block_submit">Uploading response</span>
+           </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+
+<div ng-class="{sandbox:testingMode}" style="bottom:0; top:220px; position:absolute;" ng-show="entity || lines.length">
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="height:100%; overflow-y:scroll;">
+
+            <h3>Wikipedia article for {{entity}}</h3>
+
+
+            <div class="" ng-repeat="line in lines track by $index"
+                 ng-init="words = line.split('\t')[1]; sent_idx = $index"
+
+                 ng-show="$index >= start_line && $index < end_line"
+            >
+
+                <div
+                 ng-class="{'highlight':active==$index, 'hsupports':support_sents.indexOf($index)!=-1,'hrefuted':refute_sents.indexOf($index)!=-1 ,'hpsupports':partial_support_sents.indexOf($index)!=-1,'hprefuted':partial_refute_sents.indexOf($index)!=-1 , 'ebox': words.length>1,'pskip': words.length<=1 }"
+                >
+
+
+                    <div style="display:table-cell; width:100%">
+                        <span ng-repeat="block in line_links[$index]">
+                            <span ng-show="block['link']!=null">
+                                {{block['text']}}
+                            </span>
+
+                            <span ng-hide="block['link']!=null">
+                                {{block['text']}}
+                            </span>
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div ng-show="words.length>1" style="text-align: right; margin-bottom:20px;" >
+                    <button class="btn btn-success btn-xs" ng-disabled="loading" ng-click="supports($index)">Fully Supports</button>
+                    <button class="btn btn-success partial btn-xs" ng-disabled="loading" ng-click="partial_supports($index)">Partially Supports</button>
+                    <button class="btn btn-xs btn_blk" ng-disabled="loading" ng-click="cancel($index)">Not Enough Information</button>
+                    <button class="btn btn-danger partial btn-xs" ng-disabled="loading" ng-click="partial_refutes($index)">Partially Refutes</button>
+                    <button class="btn btn-danger btn-xs" ng-disabled="loading" ng-click="refutes($index)">Fully Refutes</button>
+
+
+                </div>
+
+            </div>
+        </div>
+</div>
+
+<form action="https://www.mturk.com/mturk/externalSubmit" method="post" ng-form-commit name="xform">
+    <input type="hidden" name="assignmentId" ng-value="final_form_id" />
+    <input type="hidden" name="id" ng-value="final_form_numberOfSentencesVisited" />
+    <input type="hidden" name="numberOfSentencesVisited" ng-value="final_form_numberOfCustomItemsAdded" />
+    <input type="hidden" name="numberOfCustomItemsAdded" ng-value="final_form_submitType" />
+    <input type="hidden" name="submitType" ng-value="final_form_submitType" />
+    <input type="hidden" name="selections" ng-value="final_form_selections" />
+    <input type="hidden" name="supportSents" ng-value="final_form_supportSents"/>
+    <input type="hidden" name="refuteSents" ng-value="final_form_refuteSents"/>
+    <input type="hidden" name="partialSupportSents" ng-value="final_form_partialSupportSents"/>
+    <input type="hidden" name="partialRefuteSents" ng-value="final_form_partialRefuteSents"/>
+    <input type="hidden" name="timer" ng-value="final_form_timer" />
+</form>
+
+<modal visible="showModalWiki">
+<modal-header title="Add Evidence Page"></modal-header>
+<modal-body>
+    <h3>Add a Wikipedia Evidence</h3>
+    <p>Search for a relevant page from Wikipedia (using <a href="http://google.com" target="_blank">Google</a> or <a href="https://en.wikipedia.org" target="_blank">Wikipedia</a>) and paste the URL in the box below</p>
+    <input ng-model="mainAddUrl" placeholder="e.g. https://en.wikipedia.org/wiki/Keanu_Reeves or Reality_television" name="addmain" style="width:100%;margin-bottom:10px;display:block" />
+    <button ng-click="addMain(mainAddUrl)" class="btn btn-primary">Add</button>
+
+</modal-body>
+</modal>
+
+
+<modal visible="showModal1" on-sown="modalOneShown()" on-hide="modalOneHide()">
+<modal-header title="Add Another Page"></modal-header>
+<modal-body>
+    <h3>Add a Wikipedia Page to Dictionary</h3>
+    <p>Search for a relevant page from Wikipedia (using <a href="http://google.com" target="_blank">Google</a> or <a href="https://en.wikipedia.org" target="_blank">Wikipedia</a>) and paste the URL in the box below</p>
+    <input ng-model="customAddUrl" placeholder="e.g. https://en.wikipedia.org/wiki/Keanu_Reeves or Reality_television" name="addcustom" style="width:100%;margin-bottom:10px;display:block" /><button ng-click="addCustom(customAddUrl)" class="btn btn-default">Add</button>
+
+</modal-body>
+</modal>
+
+
+<modal visible="showModal2">
+<modal-header title="Select reason for skipping"></modal-header>
+<modal-body>
+        <p>
+            <button class="btn btn-default" ng-click="showModal2=false; onSubmit(xform, 1)">Not Enough Information</button><br />
+            Select if the document (or dictionary items) contains no information that can be used to support or refute this claim. You will still receive credit for this HIT.
+        </p>
+        <hr />
+        <p>
+            <button class="btn btn-danger" ng-click="showModal2=false; onSubmit(xform, 2)">I don't want to annotate this example</button><br />
+            This will reassign this claim to another annotator. You will not receive credit for this HIT.
+        </p>
+
+
+</modal-body>
+</modal>
+
+
+<modal visible="showModal3">
+<modal-header title="Guidelines"></modal-header>
+<modal-body>
+
+    <p>The purpose of this task is to identify evidence from a Wikipedia page that can be used to support or refute simple factoid sentences called claims. The claims are generated by humans (as part of the WF1 annotation workflow) from the Wikipedia page about {{entity}}. Some claims are true. Some claims are fake. You must find the evidence from the page that supports or refutes the claim.</p>
+
+    <p>Sometimes the sentences in the Wikipedia page will not be enough on their own to fully support or refute the sentence. If you think that a sentence is helpful, but requires more information, mark it as partially supported</p>
+
+
+
+    <h4 class="topmargin">Step-by-step guide:</h4>
+
+    <ol class="gul">
+        <li>Read and understand the claim</li>
+        <li>Read the Wikipedia page and identify sentences that contain relevant information.</li>
+        <li>On identifying a relevant sentence, press one of the buttons immediately below it to annotate it.
+            <ul>
+                <li>If the highlighted sentence contains enough information in a definitive statement to support or refute the claim, press the Fully Supports or Fully Refutes button to add your annotation. Then continue annotating from step 2.</li>
+                <li>If the highlighted sentence contains some information supporting or refuting the claim but also needs additional information press the Partially Supports or Partially Refutes Button.</li>
+
+            </ul>
+        </li>
+        <li>On reaching the end of the Wikipedia page. Press <strong>Submit</strong> if you could find information that supports or refutes the claim. If you could not find any supporting evidence, press <strong>Not enough information</strong> at the top of the page</li>
+    </ol>
+
+    <h4 class="topmargin">What does it mean to Support or Refute</h4>
+    <p>The objective is to find sentences that support or refute the claim.</p>
+    <p>You must apply <strong>common-sense</strong> reasoning to the evidence you read but <em>avoid applying your own world-knowledge</em> by basing your decisions on the information presented in the Wikipedia page and dictionary.</p>
+
+    <p>As a guide - you should ask yourself:</p>
+
+    <div class="ebox"><em>If I was given only the selected sentences, do I have stronger reason to believe claim is true (fully supported) or stronger reason to believe the claim is false (fully refuted). If I'm not certain, the claim is partially supported or refuted because I cannot reach a definitive conclusion.</em></div>
+
+
+    <p>The following count as valid justifications for marking an item as supported/refuted:</p>
+    <ul>
+        <li>Sentence directly states information that supports/refutes the claim or states information that is synonymous/antonymous with information in the claim<br />
+            <div class="ebox">
+                <strong>Claim:</strong> Water occurs artificially<br/>
+                <strong>Refuted by:</strong> ``It also occurs in nature as snow, glaciers ...''
+            </div>
+            <div class="ebox">
+                <strong>Claim:</strong> Samuel L. Jackson was in the third movie in the Die Hard film series.<br/>
+                <strong>Supported by:</strong> ``He is a highly prolific actor, having appeared in over 100 films, including Die Hard 3.''
+            </div>
+        </li>
+
+        <li>Sentence refutes the claim through negation or quantification<br />
+            <div class="ebox">
+                <strong>Claim:</strong> Schindler's List received no awards.<br/>
+                <strong>Refuted by:</strong> ``It was the recipient of seven Academy Awards (out of twelve nominations), including Best Picture, Best Director...''
+            </div>
+        </li>
+
+        <li>Sentence provides information about a different entity and only one entity is permitted (e.g. place of birth can only be one place)
+            <div class="ebox">
+                <strong>Claim:</strong> David Schwimmer finished acting in Friends in 2005.<br/>
+                <strong>Refuted by:</strong> ``After the series finale of Friends in 2004, Schwimmer was cast as the title character in the 2005 drama Duane Hopwood.''
+            </div>
+        </li>
+
+        <li>Sentence provides information that, in conjunction with other sentences from the dictionary, fulfils one of the above criteria
+            <div class="ebox">
+                <strong>Claim:</strong> John McCain is a conservative.<br/>
+                <strong>Refuted by:</strong> ``He was the Republican nominee for the 2008 U.S. presidential election.'' <strong>AND</strong> ``The Republican Party's current ideology is American conservatism, which contrasts with the Democrats' more progressive platform (also called modern liberalism).''
+            </div>
+        </li>
+    </ul>
+
+
+
+
+    <h4 class="topmargin">Tense</h4>
+    <p>The difference in verb tenses that do not affect the meaning should be ignored.</p>
+
+    <div class="ebox">
+        <strong>Claim: </strong> Frank Sinatra is a musician<br/>
+        <strong>Supported: </strong> He is one of the best-selling music artists of all time, having sold more than 150 million records worldwide.
+    </div>
+
+    <div class="ebox">
+        <strong>Claim: </strong> Frank Sinatra is a musician <br/>
+        <strong>Supported: </strong> Francis Albert Sinatra (/sɪˈnɑːtrə/; Italian: [siˈnaːtra]; December 12, 1915 – May 14, 1998) was an American singer
+    </div>
+
+
+    <h4 class="topmargin">Skipping</h4>
+    <p>There may be times where it is appropriate to skip the claim:</p>
+
+    <ul>
+        <li>The claim cannot be verified using the information with the information provided:
+            <ul>
+                <li>If the claim could potentially be verified using other publicly available information. Select <strong>Not Enough Information</strong></li>
+            </ul>
+        </li>
+    </ul>
+
+</modal-body>
+</modal>
+
+<modal visible="showModalEnd">
+    <modal-header title="No more annotation tasks!"></modal-header>
+    <modal-body style="background-color: black">
+        <h3 style="text-align: center; color: white">Congratulations on completing <strong>FEVER</strong>!</h3>
+        <p style="text-align: center; color: white">
+            <br/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Fuochi_d%27artificio.gif"/>
+        </p>
+        <p style="text-align: center">
+            <button class="btn btn-default" ng-click="goHome();">Return Home</button>
+        </p>
+    </modal-body>
+</modal>

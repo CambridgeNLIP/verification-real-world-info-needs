@@ -1,0 +1,349 @@
+<shortcut></shortcut>
+
+<div class="container-fluid">
+    <div id="top" class="anchor" ></div>
+    <div style="position:fixed; display: inline-block; top:0px; right:0px; z-index:2;">
+    <button class="btn btn-primary" ng-click="showGuidelines()">Guidelines (updated July 18)</button>
+    <button class="btn btn-primary" ng-click="showKeyboard()">Keyboard Shortcuts</button>
+    </div>
+
+    <h1>Evidence finding task</h1>
+
+    <div class="guidelines" ng-show="guidelines">
+
+        <p>Welcome to this <strong>evidence finding task</strong>. You must <em>select a minimal set of sentences</em> from a short passage from Wikipedia that provide evidence to say whether a claim is <em>true</em> or <em>false</em>.</p>
+
+        <h3>Why are we collecting this data and what are we looking for?</h3>
+        <p>Our research group is collecting data to evaluate how computers can find and understand written information.
+            While search engines are very good at finding related information, they struggle with finding <em>evidence</em> that persuades someone that a claim is true or false.
+            In this HIT, the claims you are labelling are search queries people have made and the page you are labelling has a good chance of containing information that indicates the claim is true or false.
+            Your job is to select the sentences which indicate whether the claim is true or false so that we can compare whether human intuition can be captured by these artificial intelligence systems. </p>
+
+        <h3>Guidelines</h3>
+        <ul>
+            <li>Only select sentences that are necessary for you to form a judgement (either by combining some sentences together or a set of sentences that each individually substantiate the claim).</li>
+            <li>A simple way to check whether a sentence is 'evidence' is to ask yourself "without this sentence, would my opinion whether the claim is true or false change?". If yes, the sentence would be evidence. If no, then do not include the sentence</li>
+            <li>Sentences that do not provide evidence to say whether a claim is true or false <u>should not be selected</u></li>
+            <li>Some sentences have more than one sentence that supports the claim equally well. Select all sentences that are evidence.</li>
+            <li>You must only the information from the text snippets we provide to inform your decision.  You <u>MUST NOT</u> use any external resources such as a search engine or external Wikipedia articles. You <u>are allowed</u> to use general knowledge or common sense.</li>
+            <li>The page and section title are to provide you with context. But should <u>not</u> be part of the evidence you use to form your decision. Only make your decision from the sentences in the document that you can highlight.</li>
+            <li><strong>If a sentence refers to an object using a pronoun (it, he, she, they, etc) or anaphora (the album, the car, etc.), you must also select evidence that that describes what the pronoun refers to (see example 2). If the meaning of the pronoun in a sentence cannot be resolved from selecting an extra sentence, it is not evidence.</strong></li>
+        </ul>
+
+        <h3>HIT Review Policy</h3>
+        <p>
+            To ensure annotation quality, we regularly review HITs submitted by all workers.
+            After your first 50-100 HITs, we will pause your qualification to perform a manual review of your HITs and use this to give you feedback.
+            Where errors occur, we will make corrections and provide constructive feedback to help you learn (these are NOT rejections).
+
+        </p>
+
+        <p>
+            After this, we will continuously monitor annotation quality through manually reviewing your submissions and provide feedback where appropriate.
+            Where a high number of errors are caused by 'rushing', we may reject some of these HITs rather than providing feedback.
+            Workers who have a higher than average error rate, faster than average submission times, unusual annotation patterns, or disagree with other workers may be more likely to be manually reviewed.
+        </p>
+
+        <p>
+            To ensure diversity and quality of the data, and minimize worker fatigue, we may give accounts with very high submission rates a temporary time-out.
+        </p>
+
+
+    <h3>Step-by-step annotation process</h3>
+    <ol>
+        <li>Read the claim.</li>
+        <li>Read each sentence from the Wikipedia passage and label it as follows:
+            <ul>
+                <li>If the sentence provides evidence to say the claim is true, select <span class="line_x_label">T</span>.</li>
+                <li>If the sentence provides evidence to say the claim is false, select <span class="line_x_label">F</span>.</li>
+                <li>The default option is <span class="line_x_label">-</span> where the sentence is not evidence. There will be some cases where no evidence can be found in the passage.</li>
+            </ul>
+            <strong>Pay special attention to the Wikipedia page or section title</strong> as it might be necessary in order to understand the relationship between the sentences in the passage and the claim.
+
+        </li>
+        <li>Once you have read the entire page and have finished selecting evidence. Press <span class="line_x_label">Next</span>
+        <ul>
+            <li>If you selected evidence, you will be asked decide whether the claim is <span class="line_x_label">true</span> or <span class="line_x_label">false</span> and asked a couple of questions about your decision.</li>
+            <li>If there isn't enough information for you to be certain but the evidence selected indicates that it is likely that the claim is true or false, <br />select <span class="line_x_label">I need to would need to find more evidence to be sure</span></li>
+
+            <li>If you could find no information to say whether the claim is true or false, you will be asked to record whether the passage is relevant.<br />
+                This means the passage is discussing the information in the claim, but does not contain strong evidence that supports or refutes the claim.</li>
+        </ul>
+        </li>
+        <li>After you have answered the questions, click <span class="line_x_label">Submit</span> to record your annotations and complete the HIT</li>
+    </ol>
+
+    <h3>Examples</h3>
+
+    <p>There are some simple cases where it is possible to label a claim with certainty: </p>
+
+    <div class="example">
+        <div class="example_claim">liquid latex can be used as an adhesive.</div>
+        is
+        <div class="example_label">true</div>
+        because of the following evidence from the Wikipedia page titled <strong>Liquid Latex</strong>:
+        <div class="example_evidence"><label class="line_true_label example_line_true_label">T</label> One advantage to the tackiness of liquid latex is that it can act as an adhesive to attach things to the paint, such as zippers.</div>
+
+        All other sentences would not be selected.
+    </div>
+
+    <div class="example">
+        <div class="example_claim">you get to keep the french open trophy.</div>
+        is
+        <div class="example_label">false</div>
+        because of the following evidence from the Wikipedia page titled <strong>La Coupe des Mousquetaires</strong>:
+        <div class="example_evidence"><label class="line_false_label example_line_false_label">F</label> La Coupe des Mousquetaires is the trophy awarded to the winner of the Men's Singles competition at the French Open.</div>
+        <div class="example_evidence"><label class="line_false_label example_line_false_label">F</label> The winner does not get to keep the actual trophy; a new replica is produced every year.</div>
+
+        The first sentence is used to give context. As the Wikipedia page is about La Coupe des Mousquetaires, the first sentence states that this is awarded to the winner of the french open. Without this first sentence, the second sentence would not be sufficient.
+    </div>
+
+    <div class="example">
+        <div class="example_claim">You can hear the ocean in a shell.</div>
+        is
+        <div class="example_label">false</div>
+        because of the following evidence from the Wikipedia page titled <strong>Seashell resonance</strong>:
+        <div class="example_evidence">
+            <label class="line_false_label example_line_false_label">F</label> There is a popular folk myth that if one holds a seashell&mdash;specifically, most often, a conch shell&mdash;to one's ear, one can hear the sound of the ocean. <br />
+            <label class="line_false_label example_line_false_label">F</label> The rushing sound that one hears is in fact the noise of the surrounding environment, resonating within the cavity of the shell.
+        </div>
+    </div>
+
+    <p>There are some cases where there may be conflicting information. In this case, the first sentence describes the normal behavior and the second sentence provides some exceptions that attack, but do not fully refute, the first sentence. </p>
+    <div class="example">
+        <div class="example_claim">You can get a tattoo as an 18 year old.</div>
+        is
+        <div class="example_label">true</div>
+        because of the following evidence from the Wikipedia page titled <strong>Legal status of tatooing in the United States </strong>:
+        <div class="example_evidence">
+            <label class="line_false_label example_line_true_label">T</label> However, all 50 states the District of Columbia have statutory laws requiring a person receiving a tattoo be at least 18 years old.<br />
+            <label class="line_true_label example_line_true_label">T</label> Most states permit a person under the age of 18 to receive a tattoo with permission of a parent or guardian.
+        </div>
+    </div>
+
+    <p>Some claims will ask whether one object is the same as another object. These can be easily refuted by finding information showing that one is a part of another</p>
+
+    <div class="example">
+        <div class="example_claim">vanilla sugar is the same as regular sugar.</div>
+        is
+        <div class="example_label">false</div>
+        because of the following evidence from the Wikipedia page titled <strong>Vanilla sugar</strong>:
+        <div class="example_evidence">
+            <label class="line_false_label example_line_false_label">F</label> Vanilla sugar is made of sugar and vanilla beans or sugar mixed with vanilla extract
+        </div>
+    </div>
+
+    <p>And it may not be possible to certainly say whether a claim is true or false in some instances. But if there is strong support, this can be marked as true or false</p>
+
+
+    <div class="example">
+        <div class="example_claim">you can tell a lot about a person by how they treat their waiter.</div>
+        is
+        <div class="example_label">can't tell</div>
+        because the following evidence from the Wikipedia page titled <strong>The waiter rule</strong> is <span class="line_x_label">Speculative or hearsay</span>:
+        <div class="example_evidence">
+            <label class="line_false_label example_line_true_label">T</label> 'The Waiter Rule' refers to a common belief that one's true character can be gleaned from how one treats staff or service workers, such as a "waiter".
+        </div>
+    </div>
+    </div>
+
+    <div class="keyboard" ng-show="keyboard">
+
+    <h3>Keyboard Shortcuts</h3>
+    <p>Navigate through sentences in the Wikipedia passage with the <label class="line_x_label">&uarr;</label> and <label class="line_x_label">&darr;</label> arrow keys. The current sentence will be highlighted blue.</p>
+    <p>Label the currently selected sentence as evidence indicating the claim is true or false with the <label class="line_x_label">&larr;</label> and <label class="line_x_label">&rarr;</label> arrow keys.</p>
+    <p>Press <label class="line_x_label">Enter</label> to proceed to the next page.</p>
+    <p>Use numbers to answer the questions on the next page. The number will appear next to the answer to the question and will be indicated like this: <label class="line_x_label">True <label class="line_x_label">1</label></label>, <label class="line_x_label">False <label class="line_x_label">2</label></label>.</p>
+    <p>Record your annotation with <label class="line_x_label">Ctrl+S</label> - this will submit the HIT</p>
+    </div>
+</div>
+
+<div class="container-fluid">
+
+    <div class="stick">
+
+        <div>
+            Select the <u>minimal</u> set of sentences that are evidence the following claim is <strong>true</strong> or <strong>false</strong>:
+        </div>
+
+        <div class="form_row">
+            <div id="claim_text"><strong><u>Claim:</u> </strong> {{ claim_text }}</div>
+        </div>
+
+
+
+        <div ng-show="loading">Loading</div>
+        <div ng-show="testingMode">Testing</div>
+        <div ng-show="qual" style="margin-top:10px"><em>Qualification test: the number of HITs you submit will be limited. The first 10-20 HITs will be manually reviewed and feedback given before granting you unlimited annotation.</em> </div>
+    </div>
+
+
+    <!--
+    <div class="">
+        (select sentences that could help determine if the claim is true or false when combined with other information)
+    </div>
+    -->
+    <h3>Select Evidence Sentences</h3>
+    <div>
+        Only pick sentences that are evidence the claim is true or false. If a sentence refers to an object using a pronoun (it, he, she, they, etc) or anaphora (the album, the car, etc.), you must also select evidence that that describes what the pronoun refers to (see guidelines for more info).
+    </div>
+    <div class="form_sentences">
+        <h3>Information from Wikipedia page for <em>{{ entity }}</em></h3>
+        <h4>Section Title: {{ section | filterHtmlChars }}</h4>
+        <div  ng-repeat="line in lines track by $index" class=" lines_line" ng-class="{current: currentSentence==$index, line_t: selections[$index] > 0, line_f: selections[$index] < 0 }" ng-show="line.length>0 || lines[$index+1].length > 0" ng-init="selections[$index]=0">
+            <div id="sentence_{{ $index }}" class="xanchor"></div>
+            <span style="display:inline-block; font-weight:normal;">
+                <input ng-change="updateEvidence()"
+                       ng-model="selections[$index]"
+                       ng-value="1"
+                       ng-show="line.split('').length>1"
+                       type="radio" style="width:20px;"
+                       ng-attr-id="t_dict_{{$index}}"
+                       name="radio_group_{{ $index }}"
+                       class="line_true_radio"
+                />
+
+                 <label ng-show="line.split('').length>1" class="line_true_label" for="t_dict_{{$index}}">T</label>
+
+                <input ng-change="updateEvidence()"
+                       ng-model="selections[$index]"
+                       ng-value="0"
+                       ng-show="line.split('').length>1"
+                       type="radio" style="width:20px;"
+                       ng-attr-id="x_dict_{{$index}}"
+                       name="radio_group_{{ $index }}"
+                       class="line_x_radio"
+
+                />
+
+                <label ng-show="line.split('').length>1" class="line_x_label" for="x_dict_{{$index}}">-</label>
+
+                <input ng-change="updateEvidence()"
+                       ng-model="selections[$index]"
+                       ng-value="-1"
+                       ng-show="line.split('').length>1"
+                       type="radio" style="width:20px;"
+                       ng-attr-id="f_dict_{{$index}}"
+                       name="radio_group_{{ $index }}"
+                       class="line_false_radio"
+                />
+
+                <label ng-show="line.split('').length>1" class="line_false_label" for="f_dict_{{$index}}">F</label>
+
+
+                {{line | filterHtmlChars}}
+            </span>
+
+        </div>
+    </div>
+
+
+    <div>
+    {{ message }}
+    </div>
+
+    <pre ng-show="error.length>0">
+Response type: {{ error }}
+Server message:
+{{ real_error }}
+    </pre>
+
+    <footer class="master_footer">
+        <button ng-click="next(xform)" ng-disabled="loading" class="master_buttons">Next</button>
+    </footer>
+
+
+
+    <form id="xform" action="{{ trustAction(xSubmitUrl) }}" method="post" ng-form-commit name="xform">
+        <div ng-init="setForm(xform)"></div>
+        <input type="hidden" name="assignmentId" ng-value="final_form_id" />
+        <input type="hidden" name="id" ng-value="final_form_numberOfSentencesVisited" />
+        <input type="hidden" name="submitType" ng-value="final_form_submitType" />
+        <input type="hidden" name="selections" ng-value="final_form_selections" />
+        <input type="hidden" name="timer" ng-value="final_form_timer" />
+    </form>
+
+
+</div>
+
+
+<modal visible="showNextModal" on-hide="nextModalHide()" onShown="showNextModalFn()">
+<modal-header title="Submit HIT"></modal-header>
+<modal-body>
+    <h1>{{ verdict }} {{ unsure }} {{ relevant }} {{ certainty }}</h1>
+    <div ng-show="anyEvidenceSelected">
+        <p>Using <strong>only</strong> the information you highlighted, would you say the claim is true or false?</p>
+        <label class="line_x_label_lite">1</label> <input class="radio_button" type="radio" ng-model="label.verdict" value="true" id="r_true" name="r_truefalse">
+            <label class="label_button" id="l_true" for="r_true">True</label> <br/>
+        <label class="line_x_label_lite">2</label> <input class="radio_button" type="radio" ng-model="label.verdict" value="false" id="r_false" name="r_truefalse">
+            <label class="label_button" id="l_false" for="r_false">False</label> <br />
+        <label class="line_x_label_lite">3</label> <input class="radio_button" type="radio" ng-model="label.verdict" value="can't tell" id="r_dontknow" name="r_truefalse">
+            <label class="label_button" id="l_dont_know" for="r_dontknow">Can't Tell</label>
+
+        <div ng-show="label.verdict == 'can\'t tell'">
+        <p>Why can't you tell? If you have found some evidence that the claim is True or False but would need more information to be certain, please use the <span class="line_x_label">True</span> or <span class="line_x_label">False</span> options.</p>
+        <label class="line_x_label_lite">4</label> <input class="radio_button" type="radio" ng-model="label.unsure" value="speculative" id="r_speculative" name="r_unsure">
+            <label class="label_button" id="l_speculative" for="r_speculative">The evidence I highlighted is speculative or hearsay</label> (<a ng-click="showExampleSpeculative = !showExampleSpeculative">example</a>)<br />
+            <div class="example" ng-show="showExampleSpeculative">
+                The evidence may include tokens such "it is suggested that", refer to common belief or discuss mythological aspects. Alternatively, there may be no causality between the evidence and the claim.
+                <div class="example">The Waiter Rule refers to a common belief that one's true character can be gleaned from how one treats staff or service workers, such as a "waiter"</div>
+                <div class="example">There is a popular folk myth that if one holds a seashell—specifically, most often, a conch shell—to one's ear, one can hear the sound of the ocean.</div>
+            </div>
+        <label class="line_x_label_lite">5</label> <input class="radio_button" type="radio" ng-model="label.unsure" value="contradictory" id="r_contradictory" name="r_unsure">
+            <label class="label_button" id="l_contradictory" for="r_contradictory">The evidence I highlighted is contradictory</label> (<a ng-click="showExampleContradictory = !showExampleContradictory">example</a>)<br />
+            <div class="example" ng-show="showExampleContradictory">
+                The evidence is presenting arguments from both viewpoints but offers no conclusion. <strong>Do not use</strong> if evidence prefers true or false direction or uses an alternative view to strengthen an argument.
+
+                <div class="example">Good example: the larger the number of lines, the better the source code reading/comprehension. CONTRADICTS no impact on source code reading/comprehension was observed concerning the number of lines</div>
+                <div class="example">Counter example: The legal drinking age in Arkansas is 21. Minors can consume alcohol with a parent. <em>In this example the claim 'minors can drink alcohol in Arkansas' would be <span class="line_x_label">false</span> as drinking with a parent is an exceptional case.</em></div>
+
+            </div>
+        <label class="line_x_label_lite">6</label> <input class="radio_button" type="radio" ng-model="label.unsure" value="unrelated" id="r_unrelated" name="r_unsure">
+            <label class="label_button" id="l_unrelated" for="r_unrelated">The evidence I highlighted is unrelated to the claim</label>
+
+        <footer class="master_footer">
+            <button ng-click="save(xform)" ng-disabled="loading || !label.unsure || no_submit" class="master_buttons">Submit</button>
+
+            <div class="example" ng-show="no_submit">
+                <h3>Unable to submit HIT in this state:</h3>
+                You highlighted sentences that are unrelated to the claim. Please go back and de-select them. To ensure annotation quality, we regularly review submitted HITs.
+            </div>
+        </footer>
+        </div>
+
+        <div ng-show="label.verdict == 'true' || label.verdict == 'false'">
+        <p>Assuming the evidence you highlighted is valid, would finding more information strengthen your opinion?</p>
+        <label class="line_x_label_lite">4</label> <input class="radio_button" type="radio" ng-model="label.certainty" value="certain" id="r_certain" name="r_certainty">
+            <label class="label_button" id="l_certain" for="r_certain">The sentences I highlighted are enough for me</label> <br />
+        <label class="line_x_label_lite">5</label> <input class="radio_button" type="radio" ng-model="label.certainty" value="uncertain" id="r_uncertain" name="r_certainty">
+            <label class="label_button" id="l_uncertain" for="r_uncertain">I need to would need to find more evidence to be sure</label>
+
+        <footer class="master_footer">
+            <button ng-click="save(xform)" ng-disabled="loading || !label.certainty || no_submit" class="master_buttons">Submit</button>
+
+
+            <div class="example" ng-show="no_submit">
+                <h3>Unable to submit HIT in this state:</h3>
+                All the sentences you selected contradict with the label ({{ label.verdict }}) you chose. If you think the claim is {{ label.verdict }}, please go back and change the label of the appropriate sentences to {{ label.verdict }}! To ensure annotation quality, we regularly review submitted HITs.
+            </div>
+        </footer>
+
+        </div>
+
+
+
+    </div>
+
+    <div ng-show="!anyEvidenceSelected">
+        <p>You selected no evidence sentences</p>
+        <label class="line_x_label_lite">1</label> <input class="radio_button" type="radio" ng-model="label.relevant" value="not relevant" id="r_ctrue" name="r_truefalse">
+            <label class="label_button" id="l_ctrue" for="r_ctrue">The sentences does not relate to the claim</label> <br />
+        <label class="line_x_label_lite">2</label> <input class="radio_button" type="radio" ng-model="label.relevant" value="relevant" id="r_cfalse" name="r_truefalse">
+            <label class="label_button" id="l_cfalse" for="r_cfalse">The sentences relate to the claim, but none of them is evidence</label>
+
+        <footer class="master_footer">
+            <button ng-click="save(xform)" ng-disabled="loading || !label.relevant || no_submit" class="master_buttons">Submit</button>
+        </footer>
+    </div>
+</modal-body>
+</modal>

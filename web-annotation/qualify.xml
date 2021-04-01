@@ -1,0 +1,940 @@
+<QuestionForm xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2017-11-06/QuestionForm.xsd">
+    <Overview>
+        <Title>Qualification test for Wikipedia evidence finding task</Title>
+        <Text>Welcome to this evidence finding task. You must select a minimal set of sentences from a short passage from Wikipedia that provide evidence to say whether a claim (a short factual statement) is true or false.
+
+Guidelines:
+        </Text>
+        <List>
+            <ListItem>Please only select sentences that are necessary for you to form a judgement (either by combining some sentences together or a set of sentences that each individually substantiate the claim).</ListItem>
+            <ListItem>Sentences that do not provide evidence to say whether a claim is true or false should not be selected (see example 1)</ListItem>
+            <ListItem>If a sentence refers to an object using a pronoun (it, he, she, they, etc), you must also select evidence that that describes what the pronoun refers to (see example 2). If the meaning of the pronoun in a sentence cannot be resolved from selecting an extra sentence, it is not evidence.</ListItem>
+            <ListItem>Some sentences have more than one sentence that supports the claim equally well. Select all sentences that are evidence (example 3).</ListItem>
+            <ListItem>A simple way to check whether a sentence is 'evidence' is to ask yourself "without this sentence, would my opinion whether the claim is true or false change?". If yes, the sentence would be evidence. If no, then do not include the sentence</ListItem>
+            <ListItem>You use only the information we provide to inform your decision. You MUST NOT use any external resources such as a search engine or an external Wikipedia page.  </ListItem>
+        </List>
+    </Overview>
+
+
+    <Question>
+        <QuestionIdentifier>example1</QuestionIdentifier>
+        <DisplayName>example1</DisplayName>
+        <IsRequired>false</IsRequired>
+        <QuestionContent>
+            <Title>Example 1: i need a visa to go to andorra. (not graded)</Title>
+            <Text>
+                Neither of these sentence express information about requiring a visa in Andorra - they should not be selected. While the second sentence discusses border control, there is no mention of visa enforcement.
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>checkbox</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>e1-1</SelectionIdentifier>
+                        <Text>There are no airports for fixed-wing aircraft within Andorra's borders but there are, however, heliports in La Massana (Camí Heliport), Arinsal and Escaldes-Engordany with commercial helicopter services.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>e1-2</SelectionIdentifier>
+                        <Text>Because of the need of going to a border control if flying outside of Andorra, these helicopter services go to airports.</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+
+    <Question>
+        <QuestionIdentifier>example2</QuestionIdentifier>
+        <DisplayName>example2</DisplayName>
+        <IsRequired>false</IsRequired>
+        <QuestionContent>
+            <Title>Example 2: nicki minaj has been number one on billboard. (not graded)</Title>
+            <Text>
+                The second sentence is evidence and should be highlighted. Because this sentence starts with "the album", the first sentence must also be highlighted as this is needed to infer the meaning of "the album".
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>checkbox</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>e2-1</SelectionIdentifier>
+                        <Text>Minaj's second studio album, "Pink Friday: Roman Reloaded" was released in 2012.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>e2-2</SelectionIdentifier>
+                        <Text>The album debuted at number one on the "Billboard" 200.</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>example3</QuestionIdentifier>
+        <DisplayName>example3</DisplayName>
+        <IsRequired>false</IsRequired>
+        <QuestionContent>
+            <Title>Example 3: celery has negative calories. (not graded)</Title>
+            <Text>
+                Sentences 1, 3 and 4 each act as evidence. Sentence 2 does not.
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>checkbox</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>e3-1</SelectionIdentifier>
+                        <Text>There is no scientific evidence to show that any food has a negative calorific impact.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>e3-2</SelectionIdentifier>
+                        <Text>Foods claimed to be negative in calories are mostly low-calorie fruits and vegetables such as celery, grapefruit, lemon, lime, apple, lettuce, broccoli, and cabbage.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>e3-3</SelectionIdentifier>
+                        <Text>However, celery has a thermic effect of around 8%, much less than the 100% or more required for a food to have "negative calories".</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>e3-4</SelectionIdentifier>
+                        <Text>Nevertheless, these diets are not "negative-calorie" since they bear energy.</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+    <Overview>
+    <Text>
+
+
+        Qualification Questions:
+
+    </Text>
+</Overview>
+    <Question>
+        <QuestionIdentifier>q1</QuestionIdentifier>
+        <DisplayName>Claim 1 - Evidence</DisplayName>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Claim 1: sweet italian sausage is the same as mild</Title>
+            <Text>
+                Select evidence from the Wikipedia page "Italian Sausage" needed to verify the claim.
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>checkbox</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>In North America, 'Italian sausage' most often refers to a style of pork sausage.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>In Italy, however, a wide variety of sausages are made, many of which are quite different from the aforementioned product.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>The most common varieties marketed as "Italian sausage" in supermarkets are hot, sweet, and mild.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>4</SelectionIdentifier>
+                        <Text>The difference between mild and sweet is the addition of sweet basil in the latter.</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>q1a</QuestionIdentifier>
+        <DisplayName>Claim 1 - Label</DisplayName>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Text>
+                Using only the evidence you found. Was the claim true or false?
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>True</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>False</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>There was no evidence</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>q2</QuestionIdentifier>
+        <DisplayName>Claim 2 - Evidence</DisplayName>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Claim 2: you can give yourself an assist in basketball.</Title>
+            <Text>
+                Select evidence from the Wikipedia page "Assist (Basketball)" needed to verify the claim.
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>checkbox</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>In basketball, an 'assist' is attributed to a player who passes the ball to a teammate in a way that leads to a score by field goal, meaning that they were "assisting" in the basket.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>A pass that leads to a shooting foul and scoring by free throws does not count as an assist in the NBA, but does in FIBA play (only one assist is awarded per set of free throws in which at least one free throw is made).</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>Point guards tend to get the most assists per game (apg), as their role is primarily that of a passer and ballhandler.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>4</SelectionIdentifier>
+                        <Text>Being inside the key, the center often has the best angles and the best position for "dishes" and other short passes in the scoring area.</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>q2a</QuestionIdentifier>
+        <DisplayName>Claim 2 - Label</DisplayName>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Text>
+                Using only the evidence you found. Was the claim true or false?
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>True</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>False</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>There was no evidence</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <!--
+    <Question>
+        <QuestionIdentifier>q3</QuestionIdentifier>
+        <DisplayName>Claim 3 - Evidence</DisplayName>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Claim 3: g major is not the same thing as e minor.</Title>
+            <Text>
+                Select evidence from the Wikipedia page "Relative key" needed to verify the claim.
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>checkbox</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>In music, 'relative keys' are the major and minor scales that have the same key signatures, meaning that they share all the same notes but are arranged in a different order of whole steps and half steps.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>The 'relative minor' of a particular major key, or the 'relative major' of a minor key, is the key which has the same key signature but a different tonic; this is as opposed to "parallel" minor or major, which shares the same tonic (from the Latin "relativus", itself from "relatus", past participle of "referre").</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>Relative keys are closely related keys, the keys between which most modulations occur, in that they differ by no more than one accidental (none in the case of relative keys).</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>4</SelectionIdentifier>
+                        <Text>The minor key starts three semitones below its relative major; for example, A minor is three semitones below its relative, C major.</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>q3a</QuestionIdentifier>
+        <DisplayName>Claim 3 - Label</DisplayName>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Text>
+                Using only the evidence you found. Was the claim true or false?
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>True</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>False</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>There was no evidence</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    -->
+    <Question>
+        <QuestionIdentifier>q4</QuestionIdentifier>
+        <DisplayName>Claim 3 - Evidence</DisplayName>
+        <IsRequired>false</IsRequired>
+        <QuestionContent>
+            <Title>Claim 3: dad's army cast is still alive.</Title>
+            <Text>
+                Select evidence from the Wikipedia page "Frank Williams (actor)" needed to verify the claim.
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>checkbox</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>'Frank J Williams' (born 2 July 1931) is an English actor best known for playing Timothy Farthing, the vicar in the BBC comedy "Dad's Army".</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>He reprised the role of Farthing in the 2016 film adaptation of the series.</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>q4a</QuestionIdentifier>
+        <DisplayName>Claim 3 - Label</DisplayName>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Text>
+                Using only the evidence you found. Was the claim true or false?
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>True</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>False</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>There was no evidence</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>q5</QuestionIdentifier>
+        <DisplayName>Claim 4 - Evidence</DisplayName>
+        <IsRequired>false</IsRequired>
+        <QuestionContent>
+            <Title>Claim 4: tomato puree and tomato sauce are not the same thing.</Title>
+            <Text>
+                Select evidence from the Wikipedia page "Tomato purée" needed to verify the claim.
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>checkbox</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>Tomato purée has approx 16% solids content.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>Lower solids content is due to filtering, higher content is due to concentration of the product.</Text>
+                    </Selection>
+
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>A related product, passata di pomodoro, is a tomato purée that is sieved and not cooked.</Text>
+                    </Selection>
+
+                    <Selection>
+                        <SelectionIdentifier>4</SelectionIdentifier>
+                        <Text>In this form, it is generally sold in bottles or aseptic packaging, and is most common in Europe.</Text>
+                    </Selection>
+
+
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>q5a</QuestionIdentifier>
+        <DisplayName>Claim 4 - Label</DisplayName>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Text>
+                Using only the evidence you found. Was the claim true or false?
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>True</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>False</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>There was no evidence</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <!--
+    <Question>
+        <QuestionIdentifier>q6</QuestionIdentifier>
+        <DisplayName>Claim 6 - Evidence</DisplayName>
+        <IsRequired>false</IsRequired>
+        <QuestionContent>
+            <Title>Claim 6: 1 is a prime factor of every number.</Title>
+            <Text>
+                Select evidence from the Wikipedia page "Tables of prime numbers" needed to verify the claim.
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>checkbox</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>The tables contain the prime factorization of the natural numbers from 1 to 1000.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>When "n" is a prime number, the prime factorization is just "n" itself, written in 'bold' below.</Text>
+                    </Selection>
+
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>The number 1 is called a unit.</Text>
+                    </Selection>
+
+                    <Selection>
+                        <SelectionIdentifier>4</SelectionIdentifier>
+                        <Text>It has no prime factors and is neither prime nor composite.</Text>
+                    </Selection>
+
+
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>q6a</QuestionIdentifier>
+        <DisplayName>Claim 6 - Label</DisplayName>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Text>
+                Using only the evidence you found. Was the claim true or false?
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>True</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>False</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>There was no evidence</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    -->
+    <Question>
+        <QuestionIdentifier>q7</QuestionIdentifier>
+        <DisplayName>Claim 5 - Evidence</DisplayName>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Claim 5: you can get a rash from using a hot tub.</Title>
+            <Text>
+                Select evidence from the Wikipedia page "Hot tub folliculitis" needed to verify the claim.
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>checkbox</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>'Hot tub folliculitis' is a common type of folliculitis, a condition which causes inflammation of hair follicles.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>This condition is caused by an infection of hair follicles due to the bacterium "Pseudomonas aeruginosa".</Text>
+                    </Selection>
+
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>The bacterium is commonly found in hot tubs, water slides, and such places.</Text>
+                    </Selection>
+
+                    <Selection>
+                        <SelectionIdentifier>4</SelectionIdentifier>
+                        <Text>Children are more prone to this because they usually stay in the water longer than adults.</Text>
+                    </Selection>
+
+                    <Selection>
+                        <SelectionIdentifier>5</SelectionIdentifier>
+                        <Text>Hot tub folliculitis appears on the skin in the form of a rash, roughly resembling chicken pox and then develops further to appear as a pimple.</Text>
+                    </Selection>
+
+
+                    <Selection>
+                        <SelectionIdentifier>6</SelectionIdentifier>
+                        <Text>Hot tub folliculitis can be extremely painful and/or itchy, and left alone without scratching will go away much more quickly.</Text>
+                    </Selection>
+
+
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>q7a</QuestionIdentifier>
+        <DisplayName>Claim 5 - Label</DisplayName>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Text>
+                Using only the evidence you found. Was the claim true or false?
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>True</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>False</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>There was no evidence</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>q8</QuestionIdentifier>
+        <DisplayName>Claim 6 - Evidence</DisplayName>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Claim 6: it is ok to eat the green stuff in a lobster.</Title>
+            <Text>
+                Select evidence from the Wikipedia page "Tomalley" needed to verify the claim.
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>checkbox</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>Tomalley' (from the Carib word "tumale", meaning a sauce of lobster liver), 'crab fat', or 'lobster paste' is the soft, green substance found in the body cavity of lobsters, that fulfills the functions of both the liver and the pancreas.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>Tomalley corresponds to the hepatopancreas in other arthropods.</Text>
+                    </Selection>
+
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>It is considered a delicacy, and may be eaten alone but is often added to sauces for flavour and as a thickening agent.</Text>
+                    </Selection>
+
+                    <Selection>
+                        <SelectionIdentifier>4</SelectionIdentifier>
+                        <Text>The hepatopancreas of a crab is also called tomalley, or crab "fat"; in crabs the tomalley is yellow or yellow-green in color.</Text>
+                    </Selection>
+
+
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>q8a</QuestionIdentifier>
+        <DisplayName>Claim 6 - Label</DisplayName>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Text>
+                Using only the evidence you found. Was the claim true or false?
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>True</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>False</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>There was no evidence</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>q9</QuestionIdentifier>
+        <DisplayName>Claim 7 - Evidence</DisplayName>
+        <IsRequired>false</IsRequired>
+        <QuestionContent>
+            <Title>Claim 7: ham hock is same as the bacon hock.</Title>
+            <Text>
+                Select evidence from the Wikipedia page "Ham hock" needed to verify the claim.
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>checkbox</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>A 'ham hock' (or 'hough') or 'pork knuckle' is the joint between the tibia/fibula and the metatarsals of the foot of a pig, where the foot was attached to the hog's leg.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>It is the portion of the leg that is neither part of the ham proper nor the ankle or foot (trotter), but rather the extreme shank end of the leg bone.</Text>
+                    </Selection>
+
+
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>q9a</QuestionIdentifier>
+        <DisplayName>Claim 7 - Label</DisplayName>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Text>
+                Using only the evidence you found. Was the claim true or false?
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>True</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>False</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>There was no evidence</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>q10</QuestionIdentifier>
+        <DisplayName>Claim 8 - Evidence</DisplayName>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Claim 8: devil's food cake is not the same as chocolate.</Title>
+            <Text>
+                Select evidence from the Wikipedia page "Devil's food cake" needed to verify the claim.
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>checkbox</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>Devil's food cake is commonly a dense, rich chocolate cake.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>It traditionally uses unsweetened chocolate baking squares in lieu of unsweetened cocoa powder.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>However, contemporary recipes typically use cocoa powder for its convenience over the more traditional chocolate baking squares.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>4</SelectionIdentifier>
+                        <Text>Also, because of its reduced amount of cocoa butter, cocoa powder has a more intense chocolate flavor than unsweetened chocolate.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>5</SelectionIdentifier>
+                        <Text>Its antithetical counterpart, the angel food cake, is a very light white cake that uses stiffly beaten egg whites and no dairy.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>6</SelectionIdentifier>
+                        <Text>Devil's food cake is sometimes distinguished from other chocolate cakes by the use of additional baking soda (sodium bicarbonate), which raises the pH level and makes the cake a deeper and darker mahogany color.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>7</SelectionIdentifier>
+                        <Text>Devil's food cake incorporates butter (or a substitute), eggs, flour, and less egg than other chocolate cakes.</Text>
+                    </Selection>
+
+
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>q10a</QuestionIdentifier>
+        <DisplayName>Claim 8 - Label</DisplayName>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Text>
+                Using only the evidence you found. Was the claim true or false?
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>True</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>False</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>There was no evidence</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>q11</QuestionIdentifier>
+        <DisplayName>Claim 9 - Evidence</DisplayName>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Claim 9: discretionary income is the same as disposable income</Title>
+            <Text>
+                Select evidence from the Wikipedia page "Disposable and discretionary income" needed to verify the claim.
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>checkbox</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>'Discretionary income' is disposable income (after-tax income), minus all payments that are necessary to meet current bills.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>It is total personal income after subtracting taxes and minimal survival expenses (such as food, medicine, rent or mortgage, utilities, insurance, transportation, property maintenance, child support, etc.)to maintain a certain standard of living.</Text>
+                    </Selection>
+
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>It is the amount of an individual's income available for spending after the essentials have been taken care of:</Text>
+                    </Selection>
+
+                    <Selection>
+                        <SelectionIdentifier>4</SelectionIdentifier>
+                        <Text>Despite the definitions above, disposable income is often incorrectly used to denote "discretionary income".</Text>
+                    </Selection>
+
+                    <Selection>
+                        <SelectionIdentifier>5</SelectionIdentifier>
+                        <Text>For example, people commonly refer to disposable income as the amount of "play money" left to spend or save.</Text>
+                    </Selection>
+
+
+                    <Selection>
+                        <SelectionIdentifier>6</SelectionIdentifier>
+                        <Text>The Consumer Leverage Ratio is the expression of the ratio of total household debt to disposable income.</Text>
+                    </Selection>
+
+
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>q11a</QuestionIdentifier>
+        <DisplayName>Claim 9 - Label</DisplayName>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Text>
+                Using only the evidence you found. Was the claim true or false?
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>True</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>False</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>There was no evidence</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>q12</QuestionIdentifier>
+        <DisplayName>Claim 10 - Evidence</DisplayName>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Claim 10: it cannot rain if there are no clouds.</Title>
+            <Text>
+                Select evidence from the Wikipedia page "Serein (meteorology)" needed to verify the claim.
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>checkbox</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>'Serein' refers to rain falling from a cloudless sky.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>This sort of rain is said to take on the form of a fine, light drizzle, typically after dusk.</Text>
+                    </Selection>
+
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>The name derives from French "serein", meaning "serene", or "clear" (as in unclouded).</Text>
+                    </Selection>
+
+                    <Selection>
+                        <SelectionIdentifier>4</SelectionIdentifier>
+                        <Text>An alternative etymology is from Old French "serain", evening.</Text>
+                    </Selection>
+
+                    <Selection>
+                        <SelectionIdentifier>5</SelectionIdentifier>
+                        <Text>An explanation could be the evaporation of the cloud droplets when precipitation drops are formed.</Text>
+                    </Selection>
+
+
+                    <Selection>
+                        <SelectionIdentifier>6</SelectionIdentifier>
+                        <Text>Anyway, for others the phenomenon is simply non existing and should be considered equivalent to rain falling from a distant cloud, when there is a strong vertical wind shear between the cloud itself and ground, while the sky is apparently clear.</Text>
+                    </Selection>
+
+
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>q12a</QuestionIdentifier>
+        <DisplayName>Claim 10 - Label</DisplayName>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Text>
+                Using only the evidence you found. Was the claim true or false?
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>True</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>False</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>There was no evidence</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+</QuestionForm>

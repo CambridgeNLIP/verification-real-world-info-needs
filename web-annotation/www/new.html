@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Natural Claim Annotation</title>
+        
+        <style>
+            body {
+                font-family: Arial;
+                font-size:16px;
+            
+            }
+            
+            #claim_text {
+                padding:10px;
+                border: 1px #aaa solid; 
+                max-width: 80%;
+                
+                box-shadow: 0px 0px 4px #ccc;
+                border-radius:4px;
+            }
+            
+            #l_true, #l_false, #l_notsure {
+                display:inline-block;
+                padding: 10px;
+                cursor: pointer;
+                border: 1px solid #aaa;
+                box-shadow: 0px 0px 4px #ccc;
+                border-radius:4px;
+            }
+            
+            #r_true, #r_false, #r_notsure {
+                display: none;
+            }
+            
+            
+            input[type="radio"]:checked+label#l_true { 
+                font-weight: bold; 
+                background-color: darkseagreen;
+                
+            } 
+            
+            input[type="radio"]:checked+label#l_false { 
+                font-weight: bold; 
+                background-color: indianred;
+            } 
+            
+            input[type="radio"]:checked+label#l_notsure { 
+                font-weight: bold; 
+                background-color: lightblue;
+            } 
+            
+            .form_row {
+                margin-top:15px;
+            }
+            
+            .show_tf, .show_nottf {
+                display: none;
+            }
+            
+            input[type="radio"]:checked+label#l_true { 
+                font-weight: bold; 
+                background-color: darkseagreen;
+                
+            } 
+            
+            input[type="radio"]:checked+label#l_false { 
+                font-weight: bold; 
+                background-color: indianred;
+            } 
+            
+            .form_sentences {
+                margin-top: 20px;
+                background-color: aliceblue;
+                padding:15px;
+                border-radius:8px;
+            }
+            .form_sentences > div {
+                display: block;
+                padding: 5px;
+                
+            }
+            
+            .master_buttons {
+                border: 1px solid #aaa;
+                box-shadow: 0px 0px 4px #ccc;
+                padding:8px;
+                font-size:16px;
+                border-radius:4px;
+            }
+            
+            .master_footer {
+                margin-top:20px;
+            }
+            
+            .form_sentences h3 {
+                margin-top: 5px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <header></header>
+        
+        <div>
+            Using only the provided information, the following sentence:
+        </div>
+        
+        <div class="form_row">
+            <div id="claim_text">The movie notebook was based on a true story.</div>
+        </div>
+        
+        <div class="form_row">
+            is <input type="radio" value="true" id="r_true" name="r_truefalse"><label id="l_true" for="r_true">Certainly True</label> <input type="radio" value="true" id="r_true" name="r_truefalse"><label id="l_true" for="r_true">Likely True</label> <input type="radio" value="true" id="r_true" name="r_truefalse">
+            <input type="radio" value="false" id="r_false" name="r_truefalse"><label id="l_false" for="r_false">Likely False</label>  <input type="radio" value="false" id="r_false" name="r_truefalse"><label id="l_false" for="r_false">Certainly False</label>  
+            <!--
+            <input type="radio" value="false" id="r_notsure" name="r_truefalse"><label id="l_notsure" for="r_notsure">Not Sure</label> because:
+            -->
+        </div>
+        
+        
+        <div class="form_sentences">
+            <h3>Information from Wikipedia page for <em>The Notebook (novel)</em></h3>
+            <h4>Section Title: Background</h4>
+            <div><input type="checkbox">This was Nicholas Sparks' first published novel.</div>	
+            <div><input type="checkbox">It was the third written after The Passing and The Royal Murders, which he did not publish.</div>
+            <div><input type="checkbox">He wrote it over a period of six months in 1994.</div>	
+            <div><input type="checkbox">Literary agent Theresa Park discovered Sparks by picking the book out of her agency's slush pile and reading it.	</div>
+            <div><input type="checkbox">Park offered to represent him.	</div>
+            <div><input type="checkbox">In October 1995, Park secured a $1 million advance for the book from the Time Warner Book Group , and the novel was published in October 1996.	</div>
+            <div><input type="checkbox">It was on The New York Times Best Seller list in its first week of release.	</div>
+            <div><input type="checkbox">The Notebook was a hardcover best seller for more than a year.</div>
+            
+        </div>
+        
+        <footer class="master_footer">
+            <button class="master_buttons">Save</button> <button class="master_buttons">No Sentences provide information whether the claim is true or false</button>
+        </footer>
+    </body>
+</html>
