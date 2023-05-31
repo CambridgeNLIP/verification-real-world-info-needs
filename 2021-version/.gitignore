@@ -1,0 +1,6 @@
+modelling/data/**/*.jsonl
+
+.DS_Store
+.idea
+.pycache
+.ipynb_checkpoints

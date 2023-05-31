@@ -1,0 +1,38 @@
+{
+    "training": {
+        "evidence_sampling_strategy": null,
+        "lr": 6e-06,
+        "batch_size": 2,
+        "batch_size_accumulation": 4,
+        "best_metric_name": "negative-mse",
+        "seed": 5,
+        "epochs": 5
+    },
+    "model": {
+        "type": "evidence",
+        "output_type": "binary-evidence-probability",
+        "directory": "./trained-models",
+        "dest": "evidence-certain-regression-s5",
+        "model_name": "microsoft/deberta-v3-large",
+        "evidence_labels": "binary",
+        "evidence_params": {
+            "evidence_threshold": {
+                "min": 0.0,
+                "max": 0.3,
+                "step": 0.01
+            }
+        }
+    },
+    "data": {
+        "directory": "./data",
+        "include_entity_name": true,
+        "include_section_header": true,
+        "ambifc_subset": "ambifc-certain"
+    },
+    "wandb": {
+        "tags": []
+    },
+    "predictions": {
+        "directory": "./sent_pred"
+    }
+}

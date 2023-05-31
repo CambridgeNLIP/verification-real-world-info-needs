@@ -1,0 +1,37 @@
+{
+    "training": {
+        "evidence_sampling_strategy": "no-evidence-sample-for-neutral",
+        "lr": 6e-06,
+        "batch_size": 2,
+        "batch_size_accumulation": 4,
+        "best_metric_name": "neg_cross_entropy",
+        "seed": 3,
+        "epochs": 5,
+        "sampling_min_sentences": 1,
+        "sampling_max_sentences": 2
+    },
+    "model": {
+        "type": "veracity",
+        "output_type": "distribution",
+        "directory": "./trained-models",
+        "dest": "veracity-pipeline-certain-annotation-distillation-s3",
+        "model_name": "microsoft/deberta-v3-large",
+        "distribution_params": {
+            "human_method": "probability",
+            "softmax_temperature": null,
+            "normalize": true
+        }
+    },
+    "data": {
+        "directory": "./data",
+        "include_entity_name": true,
+        "include_section_header": true,
+        "ambifc_subset": "ambifc-certain"
+    },
+    "wandb": {
+        "tags": []
+    },
+    "predictions": {
+        "directory": "./veracity_pred"
+    }
+}

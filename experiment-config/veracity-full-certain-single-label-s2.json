@@ -1,0 +1,32 @@
+{
+    "training": {
+        "evidence_sampling_strategy": "full",
+        "lr": 6e-06,
+        "batch_size": 2,
+        "batch_size_accumulation": 4,
+        "best_metric_name": "accuracy",
+        "seed": 2,
+        "epochs": 5,
+        "sampling_min_sentences": null,
+        "sampling_max_sentences": null
+    },
+    "model": {
+        "type": "veracity",
+        "output_type": "single-label-classification",
+        "directory": "./trained-models",
+        "dest": "veracity-full-certain-single-label-s2",
+        "model_name": "microsoft/deberta-v3-large"
+    },
+    "data": {
+        "directory": "./data",
+        "include_entity_name": true,
+        "include_section_header": true,
+        "ambifc_subset": "ambifc-certain"
+    },
+    "wandb": {
+        "tags": []
+    },
+    "predictions": {
+        "directory": "./veracity_pred"
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "training": {
+        "evidence_sampling_strategy": null,
+        "lr": 6e-06,
+        "batch_size": 2,
+        "batch_size_accumulation": 4,
+        "best_metric_name": "eval_evidence-f1-score",
+        "seed": 4,
+        "epochs": 5
+    },
+    "model": {
+        "type": "evidence",
+        "output_type": "single-label-classification",
+        "directory": "./trained-models",
+        "dest": "evidence-certain-binary-s4",
+        "model_name": "microsoft/deberta-v3-large",
+        "evidence_labels": "binary"
+    },
+    "data": {
+        "directory": "./data",
+        "include_entity_name": true,
+        "include_section_header": true,
+        "ambifc_subset": "ambifc-certain"
+    },
+    "wandb": {
+        "tags": []
+    },
+    "predictions": {
+        "directory": "./sent_pred"
+    }
+}
