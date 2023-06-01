@@ -1,9 +1,11 @@
 # AmbiFC
-This is the repository of our fact-checking dataset AmbiFC and includes data and code to reproduce our experimental 
+This is the repository of our fact-checking dataset [AmbiFC](https://arxiv.org/abs/2104.00640) and includes data and code to reproduce our experimental 
 results. To access the code and data of our previous version please go to [the 2021 Version](2021-version).
 
+*This repository contains experimental software and is published for the sole purpose of giving additional background details on the respective publication.*
+
 ## The Dataset AmbiFC
-You can download our dataset here (link TBD), which contains all files in the format of `<split>.<subset>.jsonl` 
+You can [download our dataset here](https://drive.google.com/drive/folders/1j1DJlE0lpTdpCvnTHgk1xr4NnbxGp4Wq), which contains all files in the format of `<split>.<subset>.jsonl` 
 with the splits *train*, *dev* and *test* and the subsets *certain* and *uncertain*.
 
 These splits include the entire data, including instances marked as relevant with less than five annotations, that 
